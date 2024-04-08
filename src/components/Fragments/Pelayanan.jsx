@@ -3,13 +3,24 @@ import { IoWallet } from "react-icons/io5";
 import { Tb3DRotate } from "react-icons/tb";
 import { FaBusinessTime } from "react-icons/fa";
 import { FaLayerGroup } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fadeIn } from "../Animate/variant";
 
 const Pelayanan = () => {
   return (
-    <section id="Pelayanan" className="w-full h-[150vh] md:h-screen flex items-center">
+    <section
+      id="Pelayanan"
+      className="w-full h-[140vh] md:h-screen flex items-start"
+    >
       <div className="flex flex-col gap-6 md:flex-row-reverse items-center w-full">
-        <div className="w-full md:w-[40%] flex flex-col gap-y-6">
-          <div className="w-[95%] md:w-full">
+        <motion.div
+          variants={fadeIn("up", 0)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.5 }}
+          className="w-full md:w-[40%] flex flex-col gap-y-6"
+        >
+          <div className="flex flex-col gap-y-1">
             <h1 className="font-bold text-[22px] md:text-[24px] tracking-[3%] text-secondary">
               Mengapa anda perlu memilih layanan kami untuk kebersihan kendaraan
               anda ?
@@ -53,10 +64,16 @@ const Pelayanan = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="w-full md:w-[60%] flex items-center justify-center mt-6">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("right", 0)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.5 }}
+          className="w-full md:w-[60%] flex items-center justify-center mt-6"
+        >
           <img src="../images/pelayanan.png" alt="pelayanan" width="500px" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

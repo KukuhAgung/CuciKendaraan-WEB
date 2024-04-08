@@ -50,3 +50,30 @@ export const questions = [
       "Kami berlokasi di Jl. Nasional III, Bayeman, Banjarparakan, Kec. Rawalo, Kabupaten Banyumas, Jawa Tengah 53173",
   },
 ];
+
+export const testimonials = [
+  {
+    name:
+      "Andi Yanto",
+    rating: 4,
+    comment: "Di jamin bersih, kinclong",
+  },
+  {
+    name:
+      "HL Coffe",
+    rating: 5,
+    comment: "Byk pilihannya",
+  },
+  {
+    name:
+      "Widi",
+    rating: 4,
+    comment: "Lumayan lama nunggunya, tapi kinclong",
+  },
+  {
+    name:
+      "Putra Diningrat",
+    rating: 5,
+    comment: "Joss mantep harga murah",
+  },
+];

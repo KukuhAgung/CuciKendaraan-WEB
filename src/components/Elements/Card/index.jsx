@@ -1,10 +1,18 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Button from "../Button";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../Animate/variant";
 
 const index = ({ kendaraan }) => {
   return (
-    <div className="w-[80%] flex flex-col gap-y-6 px-10 py-4 rounded-lg border border-stroke shadow-md">
+    <motion.div
+      variants={fadeIn("up", 0.1)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.4 }}
+      className="w-[80%] flex flex-col gap-y-6 px-10 py-4 rounded-lg border border-stroke shadow-md"
+    >
       <div className="w-full flex flex-col gap-y-2 text-center">
         <h1 className="font-bold text-[22px] md:text-[24px] tracking-[3%] text-secondary capitalize">
           {kendaraan}
@@ -41,8 +49,14 @@ const index = ({ kendaraan }) => {
           </div>
         </div>
       </div>
-      <Button variant="border border-ternitary w-full" text="text-secondary" textsize="[16px]">Contact</Button>
-    </div>
+      <Button
+        variant="border border-ternitary w-full"
+        text="text-secondary"
+        textsize="[16px]"
+      >
+        Contact
+      </Button>
+    </motion.div>
   );
 };
 

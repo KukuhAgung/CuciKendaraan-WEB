@@ -1,11 +1,19 @@
 import React from "react";
 import { questions } from "../../data/data";
+import { motion } from "framer-motion";
+import { fadeIn } from "../Animate/variant";
 
 const FAQ = () => {
   return (
-    <section className="w-full h-[120vh] md:h-[80vh] flex items-center">
+    <section className="w-full h-[110vh] md:h-[80vh] flex items-center">
       <div className="flex flex-wrap gap-6 justify-center">
-        <div className="w-full md:w-[36%] flex flex-col gap-y-3">
+        <motion.div
+          variants={fadeIn("right", 0)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="w-full md:w-[36%] flex flex-col gap-y-3"
+        >
           <h1 className="font-bold text-[22px] md:text-[24px] tracking-[3%] text-secondary">
             Paling Sering Ditanyakan
           </h1>
@@ -13,8 +21,14 @@ const FAQ = () => {
             Pada halaman ini anda bisa mendapatkan informasi berdasarkan
             pertanyaan yang paling sering ditanyakan oleh customer
           </h6>
-        </div>
-        <div className="w-full md:w-[60%]">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("left", 0)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="w-full md:w-[60%]"
+        >
           {questions.map((question) => (
             <div key={question.id} className="collapse">
               <input type="radio" name="my-accordion-1" />
@@ -26,7 +40,7 @@ const FAQ = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
