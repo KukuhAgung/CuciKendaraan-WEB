@@ -4,7 +4,7 @@ import Button from "../Button";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../Animate/variant";
 
-const index = ({ kendaraan }) => {
+const index = ({ kendaraan, harga }) => {
   return (
     <motion.div
       variants={fadeIn("up", 0.1)}
@@ -22,7 +22,7 @@ const index = ({ kendaraan }) => {
         </h6>
       </div>
       <h1 className="w-full text-center font-bold text-[18px] md:text-[20px] tracking-[3%] text-secondary">
-        Rp 10.000 / kendaraan
+        {harga} / kendaraan
       </h1>
       <div className="flex flex-col gap-y-4 w-full">
         <h6 className="font-semibold text-[14px] tracking-[3%] text-ternitary">

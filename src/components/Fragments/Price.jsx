@@ -23,8 +23,8 @@ const Price = () => {
           </h6>
         </motion.div>
         <div className="flex flex-wrap justify-center md:flex-nowrap gap-6 mt-6">
-          <Card kendaraan={"Motor"} />
-          <Card kendaraan={"Mobil"} />
+          <Card kendaraan={"Motor"} harga={"Rp.10.000"} />
+          <Card kendaraan={"Mobil"} harga={"Rp.50.000"} />
         </div>
       </div>
     </section>
